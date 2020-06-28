@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+*:focus{outline: none;}
 body{
     background-image: linear-gradient(120deg,#f6d365,#f88e4d);
     color: white;
@@ -34,6 +36,12 @@ form button{
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+form input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 form button:hover{
     background:#f88e4d;
@@ -57,6 +65,7 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
     
     
 }
@@ -75,3 +84,46 @@ form button:hover{
 .completed-btn{
     background-color: #1ab827;
 }
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity:0;
+
+}
+/* select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+} */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #f88e4d;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.14rem;
+    border: none;
+    border-radius: 10px;
+}
+/* .select:after{
+    content: "T";
+    position: absolute;
+    background: #f88e4d;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    font-style: normal;
+} */
